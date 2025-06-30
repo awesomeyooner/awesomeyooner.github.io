@@ -15,9 +15,9 @@ class NavbarHandler{
         this.loadWidgets();
     }
 
-    populateWidgets(widgets, containerID){
+    populateWidgets(widgets, containerID, active="home"){
         this.#widgets = widgets;
-        this.loadWidgets(containerID);
+        this.loadWidgets(containerID, active);
     }
 
     loadWidgets(containerID, active="home"){

@@ -88,45 +88,15 @@
 
 				            <!-- Collect the nav links, forms, and other content for toggling -->
 				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                                    
-				                    <li>
-										<a href="index.html">
-											home
-										</a>
-									</li>
+				                <ul id="navbar-container" class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp"></ul>
 
-				                    <li>
-										<a href="GITA1.html">
-											GITA 1
-										</a>
-									</li>
+								<script src="assets/js/NavbarHandler.js"></script>
+								<script src="assets/jsons/NavbarWidgets.js"></script>
 
-				                    <li>
-										<a href="GITA2.html">
-											GITA 2
-										</a>
-									</li>
-
-				                    <li>
-										<a href="GITA3.html">
-											GITA 3
-										</a>
-									</li>
-
-				                    <li class="scroll active">
-										<a href="GITA4.html">
-											GITA 4
-										</a>
-									</li>
-
-				                    <li>
-										<a href="contact.html">
-											contact
-										</a>
-									</li>
-                                    
-				                </ul><!--/.nav -->
+								<script type="text/javascript">
+									var handler = new NavbarHandler();
+									handler.populateWidgets(navbarJsonData, "navbar-container", "GITA 4");
+								</script>
 				            </div><!-- /.navbar-collapse -->
 				        </div><!--/.container-->
 				    </nav><!--/nav-->
