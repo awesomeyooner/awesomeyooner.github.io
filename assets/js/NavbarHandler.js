@@ -20,42 +20,30 @@ class NavbarHandler{
         this.loadWidgets(containerID);
     }
 
-    loadWidgets(containerID){
+    loadWidgets(containerID, active="home"){
         try{
             const container = document.getElementById(containerID);
             container.innerHTML = '';
 
             this.#widgets.forEach((widget, index) => {
-                const widgetElement = document.createElement('div');
-                widgetElement.classList.add('col-md-4');
-                widgetElement.classList.add("col-sm-6");
+                const widgetElement = document.createElement('li');
+            
+                if(widget.header == active){
+                    widgetElement.classList.add("scroll");
+                    widgetElement.classList.add("active");
+                }
 
                 /*
                     {
                     "header": "Project",
-                    "image": "assets/projects/GITA3/Avatar/avatar.png",
-                    "link": "https://classroom.google.com/u/1/c/NjkxNzExOTA3MDA1",
-                    "description": "This is my avatar!"
+                    "link": "https://classroom.google.com/u/1/c/NjkxNzExOTA3MDA1"
                     }
                 */ 
 
                 widgetElement.innerHTML = `
-                    <div class="single-service-item">
-
-                        <a href="${widget.link}">
-
-                            <div class="single-service-icon">
-                                <img src="${widget.image}">
-                            </div>
-
-                            <h2>${widget.header}</h2>
-
-                            <p>
-                                ${widget.description}
-                            </p>
-
-                        </a>
-                    </div>
+                    <a href="${widget.link}">
+                        ${widget.header}
+                    </a>
                 `;
 
                 container.appendChild(widgetElement);
