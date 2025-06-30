@@ -107,6 +107,7 @@ html,body{height: 100%;}
     font-size: 36px;
     font-weight: 500;
     padding-bottom: 35px;
+    margin-bottom: 40px;
 }
 .section-header h2:before {
     position: absolute;
@@ -122,6 +123,43 @@ html,body{height: 100%;}
 .section-header h2 span,.section-header p span{text-transform: lowercase;}
 
 /* section-header */
+
+.section-container{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.section-container{
+    position: relative;
+    text-align: center;
+}
+.section-container h2{
+    position: relative;
+    font-size: 36px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+.section-container h2:before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -42px;
+    background: blue;
+}
+.section-container p{
+    color: #444a57;
+    text-transform: capitalize;
+    margin-bottom:10px;
+
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.section-container h2 span,.section-container p span{
+    text-transform: lowercase;
+}
 
 /*=============Style css=========*/
 
@@ -206,10 +244,15 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 --------------------------------------*/
 .welcome-hero {
     position: relative;
-    background:url(../images/welcome-hero/red.jpg)no-repeat;
-    background-position: center;
-    background-size: cover;
+    /* background: url(../images/welcome-hero/red.jpg)no-repeat; */
+    /* background-position: center;
+    background-size: cover; */
     z-index: 1;
+
+    width: 100vw;
+    height: 100vh;
+
+    /* padding-bottom: 10%; */
 }
 .welcome-hero:before {
     position: absolute;
@@ -220,103 +263,59 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     height: 100%;
     background: rgba(42,45,84,.60);
 }
+
+/* =================================== */
+.home-hero{
+    background: url(../images/welcome-hero/red.jpg)no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
 /* =================================== */
 .gita1-hero {
-    position: relative;
     background:url(../images/welcome-hero/green.jpg)no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 1;
-}
-.gita1-hero:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(42,45,84,.60);
 }
 /* ====================================== */
 .gita2-hero {
-    position: relative;
     background:url(../images/welcome-hero/yellow.jpg)no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 1;
-}
-.gita2-hero:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(42,45,84,.60);
 }
 /* ====================================== */
 .gita3-hero {
-    position: relative;
     background:url(../images/welcome-hero/orange.jpg)no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 1;
-}
-.gita3-hero:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(42,45,84,.60);
 }
 /* ====================================== */
 .gita4-hero {
-    position: relative;
     background:url(../images/welcome-hero/blue.jpg)no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 1;
-}
-.gita4-hero:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(42,45,84,.60);
 }
 /* =================================== */
 .contact-hero {
-    position: relative;
     background:url(../images/welcome-hero/purple.jpg)no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 1;
 }
-.contact-hero:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(42,45,84,.60);
-}
+
 .header-area{position: absolute;top:0;left:0;width: 100%;z-index: 99;}
 
 /*.welcome-hero-txt*/
 .welcome-hero-txt{
     text-align: center;
     padding:290px 0 372px;
+
+    width: 100%;
+    height: 100%;
 }
 .welcome-hero-txt h2 {
     font-size: 42px;
     color: #fff;
     font-weight: 700;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-bottom: 45px;
 }
 .welcome-hero-txt p {
@@ -328,6 +327,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     margin: 0 auto;
 }
 .welcome-btn {
+    font-size: large;
+
     display: inline-block;
     width: 230px;
     height: 60px;
@@ -413,7 +414,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 /*-------------------------------------
         5. Service 
 --------------------------------------*/
-.service { padding: 260px 0 87px;}
+.service { padding-top: 260px;}
 
 .single-service-item{
     text-align: center;
@@ -435,12 +436,25 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     width: 100px;
     height: 100px;
 }
+
+.single-service-icon img {
+    width: 100px;
+    height: 100px;
+}
+
 .single-service-item h2 a {
     font-size:20px;
     margin: 35px 0 20px;
 }
-.single-service-item h2 a span {text-transform:  lowercase;}
-.single-service-item p {padding-bottom: 35px;text-transform: initial;position: relative;}
+.single-service-item h2 a span {
+    text-transform:  lowercase;
+}
+.single-service-item p {
+    padding-top: 20px; 
+    padding-bottom: 35px;
+    text-transform: initial;
+    position: relative;
+}
 .single-service-item p:before {
     position: absolute;
     content: "";

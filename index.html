@@ -63,7 +63,7 @@
         <![endif]-->
 	
 		<!--welcome-hero start -->
-		<section id="home" class="welcome-hero">
+		<section id="home" class="welcome-hero home-hero">
 
 			<!-- top-area Start -->
 			<div class="top-area">
@@ -85,44 +85,17 @@
 
 				            <!-- Collect the nav links, forms, and other content for toggling -->
 				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 
-				                    <li class="scroll active">
-										<a href="index.html">
-											home
-										</a>
-									</li>
+				                <ul id="navbar-container" class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp"></ul>
 
-				                    <li>
-										<a href="GITA1.html">
-											GITA 1
-										</a>
-									</li>
+								<script src="assets/js/NavbarHandler.js"></script>
+								<script src="assets/jsons/NavbarWidgets.js"></script>
 
-				                    <li>
-										<a href="GITA2.html">
-											GITA 2
-										</a>
-									</li>
+								<script type="text/javascript">
+									var handler = new NavbarHandler();
+									handler.populateWidgets(navbarJsonData, "navbar-container", "home");
+								</script>
 
-				                    <li>
-										<a href="GITA3.html">
-											GITA 3
-										</a>
-									</li>
-
-				                    <li>
-										<a href="GITA4.html">
-											GITA 4
-										</a>
-									</li>
-
-				                    <li>
-										<a href="contact.html">
-											contact
-										</a>
-									</li>
-				                </ul><!--/.nav -->
 				            </div><!-- /.navbar-collapse -->
 				        </div><!--/.container-->
 				    </nav><!--/nav-->
@@ -135,13 +108,12 @@
 
 			<div class="container">
 				<div class="welcome-hero-txt">
-					<h2>about me</h2>
+					<h2>Hello!</h2>
+
 					<p>
-						Hello! I am a student at Brea Olinda Highschool, Class of 2025.
-					</br>
-					</br>
-				
+						My name is Aaron Yoon, here you can find all the different projects I've been working on over the past few years!
 					</p>
+
 					<button class="welcome-btn" onclick="window.location.href='contact.html'">contact me</button>
 				</div>
 			</div>
@@ -149,146 +121,83 @@
 		</section><!--/.welcome-hero-->
 		<!--welcome-hero end -->
 
-		<!--service start -->
-		<section id="service" class="service">
+		<!-- Education -->
+		<section class="service">
 			<div class="container">
 
 				<div class="section-header">
-					<h2>Groups</h2>
+					<h2>Education</h2>
 				</div><!--/.section-header-->
 
 				<div class="service-content">
-					<div class="row">
+					<div id="education-container" class="row">
 
-						<!-- BOHS -->
-						<div class="col-md-4 col-sm-6">
-							<div class="single-service-item">
+						<script src="assets/jsons/EducationWidgets.js"></script>
+						<script src="assets/js/WidgetHandler.js"></script>
 
-								<a href="https://bohs.bousd.us/">
-
-									<div class="single-service-icon">
-										<img src="assets/images/organizations/school_logo.png">
-									</div>
-
-									<h2>Brea Olinda High School</h2>
-
-									<p>
-										789 Wildcat Way
-									</br>
-										Current Senior. Class of 2025 
-									</p>
-
-								</a>
-							</div>
-						</div>
-
-						<!-- GITA -->
-						<div class="col-md-4 col-sm-6">
-							<div class="single-service-item">
-								<a href="https://bohs.bousd.us/apps/pages/GITA">
-
-									<div class="single-service-icon">
-										<img src="assets/images/organizations/GITA_crop.png" style="height: 100px; width: 100px;">
-									</div>
-
-									<h2>GITA</h2>
-
-									<p>
-										4 Year course of Computer Science classes
-									</p>
-
-								</a>
-							</div>
-						</div>
-
-						<!-- MuBotics -->
-						<div class="col-md-4 col-sm-6">
-							<div class="single-service-item">
-								<a href="https://team7157.com/">
-
-									<div class="single-service-icon">
-										<img src="assets/images/organizations/Mubotics.png">
-									</div>
-
-									<h2>FRC 7157</h2>
-
-									<p>
-										Highschool robotics team </br>
-										Programming Head
-									</p>
-
-								</a>
-							</div>
-						</div>
+						<script type="text/javascript">
+							var handler = new WidgetHandler();
+							handler.populateWidgets(jsonData, "education-container");
+						</script>
 
 					</div>
 				</div>
 			</div><!--/.container-->
 
 		</section><!--/.service-->
-		<!--service end-->
+		<!-- /Education -->
 
-		<section id="service" class="service">
+		<!-- Experience -->
+		<section class="service">
 			<div class="container">
 
 				<div class="section-header">
-					<h2>Educational Goals</h2>
-				</div><!--/.section-header-->
-				
-				</br>
-
-				<h2>
-					My goal is to go to a 4 year university, majoring in CS or EECS. My top schools are UC Berkeley and University of Michigan: Ann Arbor
-				</h2>
-
-				</br>
-				</br>
-				</br>
-				</br>
-
-				<div class="section-header">
-					<h2>Career Goals</h2>
+					<h2>Experience</h2>
 				</div><!--/.section-header-->
 
-				<h2>
-					My goal is to work at some tech company relating to robotics, being a SWE there.
-				</h2>
+				<div class="service-content">
+					<div id="experience-container" class="row">
 
-				</br>
-				</br>
-				</br>
-				</br>
+						<script src="assets/jsons/ExperienceWidgets.js"></script>
 
-				<div class="section-header">
-					<h2>AP Classes</h2>
-				</div><!--/.section-header-->
+						<script type="text/javascript">
+							var handler = new WidgetHandler();
+							handler.populateWidgets(experienceJsonData, "experience-container");
+						</script>
 
-				<h2>
-					Freshman: </br>
-					&emsp; None </br>
+					</div>
+				</div>
+			</div><!--/.container-->
 
-					</br>
+		</section><!--/.service-->
+		<!-- /Experience -->
 
-					Sophomore: </br>
-					&emsp; Calculus AB </br>
+		<section class="service">
+			<div class="container">
 
-					</br>
+				<div class="section-container">
 
-					Junior: </br>
-					&emsp; English Language and Composition </br>
-					&emsp; Physics 1 </br>
-					&emsp; Calculus BC </br>
-					&emsp; Computer Science Principles </br>
+					<div class="section-header">
+						<h2>Educational Goals</h2>
+					</div><!--/.section-header-->
 
-					</br>
+					<p>
+						Hoping to transfer to UC San Diego or UC Berkely and majoring in CSE Computer Engineer and EECS respecitvely.
+					</p>
 
-					Senior: </br>
-					&emsp; Statistics </br>
-					&emsp; Micro and Macro Economics </br>
-					&emsp; English Literature and Composition </br>
-					&emsp; Computer Science A </br>
-					&emsp; Physics C: Mechanics and E&M </br>
-				</h2>
+				</div>
+
+				<!-- <div class="section-container">
+
+					<div class="section-header">
+						<h2>Career Goals</h2>
+					</div>
+
+					<p>
+						
+					</p>
+				</div> -->
+
 			</div><!--/.container-->
 
 		</section><!--/.service-->
