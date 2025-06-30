@@ -148,8 +148,8 @@
 		</section><!--/.welcome-hero-->
 		<!--welcome-hero end -->
 
-		<!--service start -->
-		<section id="service" class="service">
+		<!-- Education -->
+		<section class="service">
 			<div class="container">
 
 				<div class="section-header">
@@ -157,77 +157,49 @@
 				</div><!--/.section-header-->
 
 				<div class="service-content">
-					<div class="row">
+					<div id="education-container" class="row">
 
-						<!-- BOHS -->
-						<div class="col-md-4 col-sm-6">
-							<div class="single-service-item">
+						<script src="assets/jsons/EducationWidgets.js"></script>
+						<script src="assets/js/WidgetHandler.js"></script>
 
-								<a href="https://bohs.bousd.us/">
-
-									<div class="single-service-icon">
-										<img src="assets/images/organizations/school_logo.png">
-									</div>
-
-									<h2>Brea Olinda High School</h2>
-
-									<p>
-										789 Wildcat Way
-									</br>
-										Class of 2025 
-									</p>
-
-								</a>
-							</div>
-						</div>
-
-						<!-- GITA -->
-						<div class="col-md-4 col-sm-6">
-							<div class="single-service-item">
-								<a href="https://bohs.bousd.us/apps/pages/GITA">
-
-									<div class="single-service-icon">
-										<img src="assets/images/organizations/GITA_crop.png">
-									</div>
-
-									<h2>GITA</h2>
-
-									<p>
-										4 Year course of Computer Science classes
-									</p>
-
-								</a>
-							</div>
-						</div>
-
-						<!-- MuBotics -->
-						<div class="col-md-4 col-sm-6">
-							<div class="single-service-item">
-								<a href="https://team7157.com/">
-
-									<div class="single-service-icon">
-										<img src="assets/images/organizations/Mubotics.png">
-									</div>
-
-									<h2>FRC 7157</h2>
-
-									<p>
-										Highschool robotics team </br>
-										Programming Head
-									</p>
-
-								</a>
-							</div>
-						</div>
+						<script type="text/javascript">
+							var handler = new WidgetHandler();
+							handler.populateWidgets(jsonData, "education-container");
+						</script>
 
 					</div>
 				</div>
 			</div><!--/.container-->
 
 		</section><!--/.service-->
-		<!--service end-->
+		<!-- /Education -->
 
-		<section id="service" class="service">
+		<!-- Experience -->
+		<section class="service">
+			<div class="container">
+
+				<div class="section-header">
+					<h2>Experience</h2>
+				</div><!--/.section-header-->
+
+				<div class="service-content">
+					<div id="experience-container" class="row">
+
+						<script src="assets/jsons/ExperienceWidgets.js"></script>
+
+						<script type="text/javascript">
+							var handler = new WidgetHandler();
+							handler.populateWidgets(experienceJsonData, "experience-container");
+						</script>
+
+					</div>
+				</div>
+			</div><!--/.container-->
+
+		</section><!--/.service-->
+		<!-- /Experience -->
+
+		<section class="service">
 			<div class="container">
 
 				<div class="section-container">
@@ -237,21 +209,21 @@
 					</div><!--/.section-header-->
 
 					<p>
-						My goal is to go to a 4 year university, majoring in CS or EECS. My top schools are UC Berkeley and University of Michigan: Ann Arbor
+						Hoping to transfer to UC San Diego or UC Berkely and majoring in CSE Computer Engineer and EECS respecitvely.
 					</p>
 
 				</div>
 
-				<div class="section-container">
+				<!-- <div class="section-container">
 
 					<div class="section-header">
 						<h2>Career Goals</h2>
-					</div><!--/.section-header-->
+					</div>
 
 					<p>
-						My goal is to work at some tech company relating to robotics, being a SWE there.
+						
 					</p>
-				</div>
+				</div> -->
 
 			</div><!--/.container-->
 

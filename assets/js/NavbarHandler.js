@@ -1,4 +1,4 @@
-class WidgetHandler{
+class NavbarHandler{
     #widgets = [];
 
     constructor(){
