@@ -5,6 +5,10 @@ const navbarJsonData =
         "link": "index.html"
     },
     {
+        "header": "about",
+        "link": "about.html"
+    },
+    {
         "header": "GITA 1",
         "link": "GITA1.html",
     },
