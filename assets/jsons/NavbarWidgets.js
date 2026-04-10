@@ -9,6 +9,10 @@ const navbarJsonData =
         "link": "about.html"
     },
     {
+        "header": "Projects",
+            "link": "projects.html"
+    },
+    {
         "header": "GITA 1",
         "link": "GITA1.html",
     },

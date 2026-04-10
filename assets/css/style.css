@@ -292,7 +292,10 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 .about-hero {
     background-color: rgb(86, 161, 180);
 }
-
+/* =================================== */
+.projects-hero {
+    background-color: rgb(86, 180, 117);
+}
 
 .header-area{position: absolute;top:0;left:0;width: 100%;z-index: 99;}
 
