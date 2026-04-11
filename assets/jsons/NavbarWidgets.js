@@ -9,7 +9,7 @@ const navbarJsonData =
         "link": "pages/about.html"
     },
     {
-        "header": "Projects",
+        "header": "projects",
             "link": "pages/projects.html"
     },
     {

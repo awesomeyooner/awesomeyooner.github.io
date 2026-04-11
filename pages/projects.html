@@ -10,7 +10,7 @@
 
 		<!-- Set the root folder directory -->
 		<base href="../" />
-		
+
         <!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -49,6 +49,9 @@
         
         <!--responsive.css-->
         <link rel="stylesheet" href="assets/css/responsive.css">
+        
+		<!-- widgets.css -->
+		<link rel="stylesheet" href="assets/css/widgets-large.css"/>
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -123,6 +126,16 @@
 
 		</section><!--/.welcome-hero-->
 		<!--welcome-hero end -->
+
+		<section class="featured-cars">
+			<!-- <div class="container"> -->
+				<div class="section-header">
+					<h2>Here are my Projects!</h2>
+				</div><!--/.section-header-->
+
+				<div class="widget-container" id="widgetContainer"></div>
+			<!-- </div> -->
+		</section>
          
 		<!--languages -->
 		<section id="brand"  class="brand">
@@ -190,6 +203,15 @@
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
         
+		<!-- Load JS data -->
+		<script src="assets/projects/personal/personal.js"></script>
+		<script src="assets/js/ProjectHandler.js"></script>
+
+		<script type="text/javascript">
+			var projectHandler = new ProjectHandler();
+			projectHandler.populateWidgets(jsonData);
+		</script>
+
     </body>
 	
 </html>
