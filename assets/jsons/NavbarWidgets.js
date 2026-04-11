@@ -5,23 +5,19 @@ const navbarJsonData =
         "link": "index.html"
     },
     {
-        "header": "GITA 1",
-        "link": "GITA1.html",
+        "header": "about",
+        "link": "pages/about.html"
     },
     {
-        "header": "GITA 2",
-        "link": "GITA2.html",
+        "header": "projects",
+            "link": "pages/projects.html"
     },
     {
-        "header": "GITA 3",
-        "link": "GITA3.html",
-    },
-    {
-        "header": "GITA 4",
-        "link": "GITA4.html",
+        "header": "GITA",
+        "link": "pages/GITA.html",
     },
     {
         "header": "contact",
-        "link": "contact.html",
+        "link": "pages/contact.html",
     }
 ]

@@ -10,12 +10,12 @@ const jsonData =
         "header": "Irvine Valley College",
         "image": "assets/images/organizations/ivc.png",
         "link": "https://www.ivc.edu/",
-        "description": "Incoming Freshman Fall 2025"
+        "description": "Current Freshman"
     },
     {
         "header": "Fullerton College",
         "image": "assets/images/organizations/fjc.png",
         "link": "https://www.fullcoll.edu/",
-        "description": "Incoming Freshman Fall 2025"
+        "description": "Current Freshman"
     }
 ]
