@@ -269,6 +269,10 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     background-color: rgb(168, 41, 41);
 }
 /* =================================== */
+.gita-hero {
+    background-color: rgb(201, 141, 51);
+}
+/* =================================== */
 .gita1-hero {
     background-color: rgb(201, 141, 51);
 }
@@ -410,7 +414,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 /*-------------------------------------
         5. Service 
 --------------------------------------*/
-.service { padding-top: 260px;}
+.service { padding-top: 100px;}
 
 .single-service-item{
     text-align: center;

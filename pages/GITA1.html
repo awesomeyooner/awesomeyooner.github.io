@@ -8,6 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+		<!-- Set the root folder directory -->
+		<base href="../" />
+
         <!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -43,13 +46,12 @@
         
         <!--style.css-->
         <link rel="stylesheet" href="assets/css/style.css">
-        
-        <!--responsive.css-->
-        <link rel="stylesheet" href="assets/css/responsive.css">
 
 		<!-- widgets.css -->
 		<link rel="stylesheet" href="assets/css/widgets.css"/>
         
+        <!--responsive.css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -58,7 +60,6 @@
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
     </head>
 	
 	<body>
@@ -67,7 +68,7 @@
         <![endif]-->
 	
 		<!--welcome-hero start -->
-		<section id="home" class="welcome-hero gita3-hero">
+		<section id="home" class="welcome-hero gita1-hero">
 
 			<!-- top-area Start -->
 			<div class="top-area">
@@ -96,7 +97,7 @@
 
 								<script type="text/javascript">
 									var handler = new NavbarHandler();
-									handler.populateWidgets(navbarJsonData, "navbar-container", "GITA 3");
+									handler.populateWidgets(navbarJsonData, "navbar-container", "GITA 1");
 								</script>
 				            </div><!-- /.navbar-collapse -->
 				        </div><!--/.container-->
@@ -110,22 +111,22 @@
 
 			<div class="container">
 				<div class="welcome-hero-txt">
-					<h2>GITA 3</h2>
+					<h2>GITA 1</h2>
 					<p>
-						This class is all about games! It uses the P5 library, which is a library for Javascript to aid in drawing. 
+						This class is the Introductory class for Computer science. It uses Microsoft's Visual Studio and C# to show examples using Forms.
+						Topics covered include methods, arrays, for loops, conditional statements, and some HTML too... 
 						</br> 
-
 						Scroll down to check out my project!
 					</br> 
 					</br> 
-					</br> 
-					</br> 
+					</br>
+					
 					</p>
 				</div>
 			</div>
 		</section><!--/.welcome-hero-->
-
 		<!--welcome-hero end -->
+
 		<section class="featured-cars">
 			<!-- <div class="container"> -->
 				<div class="section-header">
@@ -135,6 +136,34 @@
 				<div class="widget-container" id="widgetContainer"></div>
 			<!-- </div> -->
 		</section>
+
+		<!-- Buttons -->
+		<section class="service">
+			<div class="container">
+
+				<div class="section-header">
+					<h2>Links</h2>
+				</div><!--/.section-header-->
+
+				<div class="service-content">
+					<div id="experience-container" class="row">
+
+                        <div style="display: flex; gap: 10px;">
+
+                            <button class="welcome-btn" onclick="window.location.href='pages/GITA1.html'">GITA 1</button>
+                        
+						    <button class="welcome-btn" onclick="window.location.href='pages/GITA2.html'">GITA 2</button>
+
+                           <button class="welcome-btn" onclick="window.location.href='pages/GITA3.html'">GITA 3</button>
+
+                            <button class="welcome-btn" onclick="window.location.href='pages/GITA4.html'">GITA 4</button>
+                        </div>
+					</div>
+				</div>
+			</div><!--/.container-->
+
+		</section><!--/.service-->
+		<!-- /Buttons -->
 
 		<!--languages -->
 		<section id="brand"  class="brand">
@@ -180,7 +209,7 @@
 
 		</section><!--/languages-->	
 		<!--languages end -->
-
+		
 		<!-- Include all js compiled plugins (below), or include individual files as needed -->
 
 		<script src="assets/js/jquery.js"></script>
@@ -201,14 +230,15 @@
 
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
-        
-		<script src="assets/projects/gita3.js"></script>
+
+		<script src="assets/projects/gita1.js"></script>
 		<script src="assets/js/ProjectHandler.js"></script>
 
 		<script type="text/javascript">
 			var projectHandler = new ProjectHandler();
 			projectHandler.populateWidgets(jsonData);
 		</script>
+        
     </body>
 	
 </html>

@@ -8,6 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+		<!-- Set the root folder directory -->
+		<base href="../" />
+		
         <!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -43,13 +46,12 @@
         
         <!--style.css-->
         <link rel="stylesheet" href="assets/css/style.css">
-        
-        <!--responsive.css-->
-        <link rel="stylesheet" href="assets/css/responsive.css">
 
 		<!-- widgets.css -->
 		<link rel="stylesheet" href="assets/css/widgets.css"/>
         
+        <!--responsive.css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -58,7 +60,6 @@
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
     </head>
 	
 	<body>
@@ -67,7 +68,7 @@
         <![endif]-->
 	
 		<!--welcome-hero start -->
-		<section id="home" class="welcome-hero gita2-hero">
+		<section id="home" class="welcome-hero gita-hero">
 
 			<!-- top-area Start -->
 			<div class="top-area">
@@ -96,7 +97,7 @@
 
 								<script type="text/javascript">
 									var handler = new NavbarHandler();
-									handler.populateWidgets(navbarJsonData, "navbar-container", "GITA 2");
+									handler.populateWidgets(navbarJsonData, "navbar-container", "GITA 1");
 								</script>
 				            </div><!-- /.navbar-collapse -->
 				        </div><!--/.container-->
@@ -110,28 +111,67 @@
 
 			<div class="container">
 				<div class="welcome-hero-txt">
-					<h2>GITA 2</h2>
+					<h2>GITA</h2>
 					<p>
-						This class is the follow-up to GITA 1, using HTML and Javascript as the learning medium. A lot of the things learned in GITA 1 are also covered in here 
-						though using the languages I mentioned earlier, though learning how to use HTML is covered more extensively here.
-						</br>
-						This class also covers topics in AP Computer Science Principles 
-						</br> 
-						Scroll down to check out my project!
+						GITA is a set of 4 year-long courses that teach different computer science topics.
+                        This class learns by working on projects, here's a link to all of my projects from each class!
+                        But first, here's a quick rundown on what each class taught:
+
+                        <br>
+                        <br>
+
+                        GITA 1 is an introductory class that taught the fundamentals of programming and OOP using C# and Visual Studio. We made applications
+                        but also games!
+
+                        <br>
+                        <br>
+
+                        GITA 2 is based on HTML with a little bit of Javascript. This class focused heavily on UI and websites rather than games.
+
+                        <br>
+                        <br>
+
+                        GITA 3 is based on Javascript, using P5.js as the primary graphics library. Every project was a game in some way, and was where I tested a lot of
+                        different algorithms, like A* and Path following!
+
+                        <br>
+                        <br>
+
+                        GITA 4 is based on Java, and is the same as AP CSA
+
 					</p>
 				</div>
 			</div>
 		</section><!--/.welcome-hero-->
+		<!--welcome-hero end -->
 
-		<section class="featured-cars">
-			<!-- <div class="container"> -->
+        <!-- Buttons -->
+		<section class="service">
+			<div class="container">
+
 				<div class="section-header">
-					<h2>Here are my Projects!</h2>
+					<h2>Links</h2>
 				</div><!--/.section-header-->
 
-				<div class="widget-container" id="widgetContainer"></div>
-			<!-- </div> -->
-		</section>
+				<div class="service-content">
+					<div id="experience-container" class="row">
+
+                        <div style="display: flex; gap: 10px;">
+
+                            <button class="welcome-btn" onclick="window.location.href='pages/GITA1.html'">GITA 1</button>
+                        
+						    <button class="welcome-btn" onclick="window.location.href='pages/GITA2.html'">GITA 2</button>
+
+                           <button class="welcome-btn" onclick="window.location.href='pages/GITA3.html'">GITA 3</button>
+
+                            <button class="welcome-btn" onclick="window.location.href='pages/GITA4.html'">GITA 4</button>
+                        </div>
+					</div>
+				</div>
+			</div><!--/.container-->
+
+		</section><!--/.service-->
+		<!-- /Buttons -->
 
 		<!--languages -->
 		<section id="brand"  class="brand">
@@ -177,7 +217,7 @@
 
 		</section><!--/languages-->	
 		<!--languages end -->
-
+		
 		<!-- Include all js compiled plugins (below), or include individual files as needed -->
 
 		<script src="assets/js/jquery.js"></script>
@@ -198,15 +238,15 @@
 
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
-        
-		<script src="assets/projects/gita2.js"></script>
+
+		<script src="assets/projects/gita1.js"></script>
 		<script src="assets/js/ProjectHandler.js"></script>
 
 		<script type="text/javascript">
 			var projectHandler = new ProjectHandler();
 			projectHandler.populateWidgets(jsonData);
 		</script>
-
+        
     </body>
 	
 </html>

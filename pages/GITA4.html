@@ -8,6 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+		<!-- Set the root folder directory -->
+		<base href="../" />
+
         <!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -46,6 +49,9 @@
         
         <!--responsive.css-->
         <link rel="stylesheet" href="assets/css/responsive.css">
+
+		<!-- widgets.css -->
+		<link rel="stylesheet" href="assets/css/widgets.css"/>
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -63,7 +69,7 @@
         <![endif]-->
 	
 		<!--welcome-hero start -->
-		<section id="home" class="welcome-hero about-hero">
+		<section id="home" class="welcome-hero gita4-hero">
 
 			<!-- top-area Start -->
 			<div class="top-area">
@@ -92,7 +98,7 @@
 
 								<script type="text/javascript">
 									var handler = new NavbarHandler();
-									handler.populateWidgets(navbarJsonData, "navbar-container", "about");
+									handler.populateWidgets(navbarJsonData, "navbar-container", "GITA 4");
 								</script>
 				            </div><!-- /.navbar-collapse -->
 				        </div><!--/.container-->
@@ -106,87 +112,64 @@
 
 			<div class="container">
 				<div class="welcome-hero-txt">
-					<h2>About</h2>	
-                    
-                    <!-- <div style="display: flex; align-items: center; gap: 20px;"> -->
-
-                        <img src="assets/images/about/cropped.png" style="float: left; width: auto; height: 400px; position: relative; left: -50px;">
-
-                        <p style="text-align: left;">
-                            Hello! My name is Aaron Yoon, I'm a current freshman at Fullerton College and Irvine Valley College preparing to transfer
-                            as a Computer Science major. 
-
-                            <br>
-                            <br>
-
-                            I love all things robotics and coding, especially when it comes to autonomy. My current interests are embedded systems (firmware, PCB design),
-                            and path planning + behavior software.
-
-                            <br>
-                            <br>
-
-                            Outside of coursework, I spend a lot of time working on my personal projects. They help me get hands on experience where I can learn from failure and bridge
-                            the gap between reality and theory.
-
-                        </p>
-                    <!-- </div> -->
+					<h2>GITA 4</h2>
+					<p>
+						This is the final class of GITA, which covers a lot of topics from AP Computer Science A through Java applications. 
+						</br> 
+						
+						Scroll down to check out my project!
+						</br> 
+						</br> 
+						</br> 
+						</br> 
+	
+					</p>
 				</div>
 			</div>
-
 		</section><!--/.welcome-hero-->
+
 		<!--welcome-hero end -->
-
-        <!-- Education -->
-		<section class="service">
-			<div class="container">
-
+		<section class="featured-cars">
+			<!-- <div class="container"> -->
 				<div class="section-header">
-					<h2>Education</h2>
+					<h2>Here are my Projects!</h2>
 				</div><!--/.section-header-->
 
-				<div class="service-content">
-					<div id="education-container" class="row">
+				<div class="widget-container" id="widgetContainer"></div>
+			<!-- </div> -->
+		</section>
 
-						<script src="assets/jsons/EducationWidgets.js"></script>
-						<script src="assets/js/WidgetHandler.js"></script>
+		</section><!--/.featured-cars-->
+		<!--featured-cars end -->
 
-						<script type="text/javascript">
-							var handler = new WidgetHandler();
-							handler.populateWidgets(jsonData, "education-container");
-						</script>
-
-					</div>
-				</div>
-			</div><!--/.container-->
-
-		</section><!--/.service-->
-		<!-- /Education -->
-
-		<!-- Experience -->
+		<!-- Buttons -->
 		<section class="service">
 			<div class="container">
 
 				<div class="section-header">
-					<h2>Experience</h2>
+					<h2>Links</h2>
 				</div><!--/.section-header-->
 
 				<div class="service-content">
 					<div id="experience-container" class="row">
 
-						<script src="assets/jsons/ExperienceWidgets.js"></script>
+                        <div style="display: flex; gap: 10px;">
 
-						<script type="text/javascript">
-							var handler = new WidgetHandler();
-							handler.populateWidgets(experienceJsonData, "experience-container");
-						</script>
+                            <button class="welcome-btn" onclick="window.location.href='pages/GITA1.html'">GITA 1</button>
+                        
+						    <button class="welcome-btn" onclick="window.location.href='pages/GITA2.html'">GITA 2</button>
 
+                           <button class="welcome-btn" onclick="window.location.href='pages/GITA3.html'">GITA 3</button>
+
+                            <button class="welcome-btn" onclick="window.location.href='pages/GITA4.html'">GITA 4</button>
+                        </div>
 					</div>
 				</div>
 			</div><!--/.container-->
 
 		</section><!--/.service-->
-		<!-- /Experience -->
-         
+		<!-- /Buttons -->
+		 
 		<!--languages -->
 		<section id="brand"  class="brand">
 			<div class="container">
@@ -253,6 +236,13 @@
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
         
+		<script src="assets/projects/gita4.js"></script>
+		<script src="assets/js/ProjectHandler.js"></script>
+
+		<script type="text/javascript">
+			var projectHandler = new ProjectHandler();
+			projectHandler.populateWidgets(jsonData);
+		</script>
     </body>
 	
 </html>
