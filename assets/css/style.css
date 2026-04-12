@@ -333,6 +333,14 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     max-width: 735px;
     margin: 0 auto;
 }
+.welcome-hero-txt a {
+    font-size: 18px;
+    text-transform: initial;
+    color: blue;
+    font-weight: 500;
+    max-width: 735px;
+    margin: 0 auto;
+}
 .welcome-btn {
     font-size: large;
 
