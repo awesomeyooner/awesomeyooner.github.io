@@ -318,10 +318,25 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     /* text-transform: uppercase; */
     margin-bottom: 45px;
 }
+.welcome-hero-txt h3 {
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    /* text-transform: uppercase; */
+    margin-bottom: 45px;
+}
 .welcome-hero-txt p {
     font-size: 18px;
     text-transform: initial;
     color: #fff;
+    font-weight: 500;
+    max-width: 735px;
+    margin: 0 auto;
+}
+.welcome-hero-txt a {
+    font-size: 18px;
+    text-transform: initial;
+    color: blue;
     font-weight: 500;
     max-width: 735px;
     margin: 0 auto;

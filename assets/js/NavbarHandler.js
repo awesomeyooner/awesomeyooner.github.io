@@ -28,8 +28,9 @@ class NavbarHandler{
             this.#widgets.forEach((widget, index) => {
                 const widgetElement = document.createElement('li');
             
-                if(widget.header == active){
-                    widgetElement.classList.add("scroll");
+                if(widget.header == active)
+                {
+                    // widgetElement.classList.add("scroll");
                     widgetElement.classList.add("active");
                 }
 
