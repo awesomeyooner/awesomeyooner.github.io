@@ -38,13 +38,34 @@ class ProjectHandler{
                     }
                 */ 
 
+                // The HTML Block is only populated if widget.readmore exists and isn't empty quotes
+                var isReadMorePresent = widget.readmore !== null && widget.readmore !== undefined;
+
+                var readmoreBlockHTML = "";
+
+                if(isReadMorePresent)
+                {
+                    readmoreBlockHTML = 
+                    `
+                        <h3>
+                            <a href="${widget.readmore}">
+                                Read More
+                            </a>
+                            
+                        </h3>
+                    `;
+                }
+
                 widgetElement.innerHTML = `
                     <a href="${widget.link}">
                         <img src="${widget.image}" alt="${widget.header}">
                         <h1>${widget.header}</h1>
                         <h2>${widget.date}</h2>
+                        
                         <p>${widget.description}</p>
                     </a>
+
+                    ${readmoreBlockHTML}
                 `;
 
                 container.appendChild(widgetElement);
