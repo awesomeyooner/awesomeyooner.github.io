@@ -15,7 +15,7 @@ const jsonData =
                 Power LED indicator, 
                 and 2 2x20 Headers for breaking out the pins.
         `,
-        "readmore": `https://drive.google.com/drive/home`
+        "readmore": `pages/Projects/tinythinker.html`
 
     }
 ]
