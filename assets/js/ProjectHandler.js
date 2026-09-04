@@ -47,25 +47,40 @@ class ProjectHandler{
                 {
                     readmoreBlockHTML = 
                     `
-                        <h3>
+                        <h4>
                             <a href="${widget.readmore}">
                                 Read More
                             </a>
                             
-                        </h3>
+                        </h4>
                     `;
                 }
 
                 widgetElement.innerHTML = `
-                    <a href="${widget.link}">
-                        <img src="${widget.image}" alt="${widget.header}">
+
+                    <div class="widget-left">
+
+                        <a href="${widget.link}">
+                            <img src="${widget.image}" alt="${widget.header}">
+                        </a>
+
+                    </div>
+
+                    <div class="widget-right">
+                        
                         <h1>${widget.header}</h1>
                         <h2>${widget.date}</h2>
+                        <h3>
+                            <a href="${widget.link}">
+                                GitHub
+                            </a>
+                        </h3>
                         
                         <p>${widget.description}</p>
-                    </a>
 
-                    ${readmoreBlockHTML}
+                        ${readmoreBlockHTML}
+
+                    </div>
                 `;
 
                 container.appendChild(widgetElement);
