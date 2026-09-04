@@ -20,12 +20,46 @@ class ProjectHandler{
         this.loadWidgets();
     }
 
-    loadWidgets(){
+    async doesFileExist(filepath)
+    {
+        try
+        {
+            const response = await fetch(filepath, { method : 'HEAD' });
+
+            if(response.ok)
+                return true;
+            else
+                return false;
+        }
+        catch(error)
+        {
+            return false;
+        }
+    }
+
+    async getFileWithExtensions(path, filename, fileExtensions)
+    {
+        // Check every extension
+        // Example:
+        // filename: image
+        // fileExtensions: [".jpg", ".png", ".jpeg"]
+        // Check image.jpg, image.png, image.jpeg and return the first existing one
+        for(const extension of fileExtensions)
+        {
+            if(await this.doesFileExist(`${path}/${filename}${extension}`))
+                return filename + extension;
+        }
+
+        return "";
+    }
+
+    async loadWidgets(){
         try{
             const container = document.getElementById('widgetContainer');
             container.innerHTML = '';
 
-            this.#widgets.forEach((widget, index) => {
+            for (const widget of this.#widgets)
+            {
                 const widgetElement = document.createElement('div');
                 widgetElement.classList.add('widget');
 
@@ -38,30 +72,14 @@ class ProjectHandler{
                     }
                 */ 
 
-                // The HTML Block is only populated if widget.readmore exists and isn't empty quotes
-                var isReadMorePresent = widget.readmore !== null && widget.readmore !== undefined;
-
-                var readmoreBlockHTML = "";
-
-                if(isReadMorePresent)
-                {
-                    readmoreBlockHTML = 
-                    `
-                        <h4>
-                            <a href="${widget.readmore}">
-                                Read More
-                            </a>
-                            
-                        </h4>
-                    `;
-                }
+                var imageFile = await this.getFileWithExtensions(widget.path, "image", [".jpg", ".png", ".jpeg"]);
 
                 widgetElement.innerHTML = `
 
                     <div class="widget-left">
 
-                        <a href="${widget.link}">
-                            <img src="${widget.image}" alt="${widget.header}">
+                        <a href="${widget.github}">
+                            <img src="${widget.path}/${imageFile}" alt="${widget.header}">
                         </a>
 
                     </div>
@@ -71,20 +89,25 @@ class ProjectHandler{
                         <h1>${widget.header}</h1>
                         <h2>${widget.date}</h2>
                         <h3>
-                            <a href="${widget.link}">
+                            <a href="${widget.github}">
                                 GitHub
                             </a>
                         </h3>
                         
                         <p>${widget.description}</p>
 
-                        ${readmoreBlockHTML}
+                        <h4>
+                            <a href="pages/project-reader.html?file=${widget.path}/readmore.md">
+                                Read More
+                            </a>
+                        </h4>
 
                     </div>
                 `;
 
                 container.appendChild(widgetElement);
-            })
+            }
+
         }
 
         catch(error){

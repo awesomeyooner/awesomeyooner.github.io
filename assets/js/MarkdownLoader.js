@@ -22,6 +22,8 @@ class MarkdownLoader
             })
             .then(text => {
 
+                console.log("Loading");
+
                 var parsed = marked.parse(text);
 
                 document.getElementById('markdown-content').innerHTML = parsed;
