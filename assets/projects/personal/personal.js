@@ -2,8 +2,8 @@ const jsonData =
 [
     {
         "header": "Tiny Thinker",
-        "image": "assets/projects/personal/tinythinker/image.jpg",
-        "link": "https://github.com/awesomeyooner/Tiny-Thinker",
+        "path": "assets/projects/personal/tinythinker",
+        "github": "https://github.com/awesomeyooner/Tiny-Thinker",
         "date": "Feb 2026",
         "description": 
         `
@@ -15,13 +15,11 @@ const jsonData =
                 Power LED indicator, 
                 and 2 2x20 Headers for breaking out the pins.
         `,
-        "readmore": `https://github.com/awesomeyooner/Tiny-Thinker`
-
     },
     {
         "header": "Polar One",
-        "image": "assets/projects/personal/polar-one/image.png",
-        "link": "https://github.com/awesomeyooner/Polar-One",
+        "path": "assets/projects/personal/polar-one",
+        "github": "https://github.com/awesomeyooner/Polar-One",
         "date": "June 2026",
         "description": 
         `
@@ -29,17 +27,20 @@ const jsonData =
             Thinker over USB for low level control. Joystick control is with a Nintendo Switch also
             running Docker.
         `,
-        "readmore": `https://github.com/awesomeyooner/Polar-One`
-
     }
 ]
 
 /*
-    {
-        "header": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "image": "assets/projects/GITA3/aaaaaaaaaaaaaa",
-        "link": "assets/projects/GITA3/aaaaaaaaaaaaa",
-        "date": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-    },
+
+{
+    "header": "My Project",
+    "path": "assets/projects/my-project",
+    "github": "https://github.com",
+    "date": "Month 2026",
+    "description": 
+    `
+        Blah blah blah
+    `,
+},
+
 */

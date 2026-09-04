@@ -15,6 +15,9 @@
 
 /* Overall Widget */
 .widget {
+    display: flex;
+    align-items: center;
+
     margin: 5px;
     padding: 20px;
     border: 1px solid #ccc;
@@ -25,26 +28,49 @@
     overflow: hidden;
 }
 
+/*
+|   LEFT    |   RIGHT   |
+|   ----    |   ----    |
+|   IMAGE   |   Title   |
+|   IMAGE   |   Date    |
+|   IMAGE   |   GitHub  |
+|   IMAGE   |   Desc    |
+|   IMAGE   |   Read    |
+*/
+
+/* Left Widget Container */
+.widget-left {
+    width: 50%;
+}
+
 /* Widget Image */
-.widget img {
+.widget-left img {
     width: 500px;
     height: auto;
     /* width: auto; */
     object-fit: cover;
     padding-bottom: 20px;
-    float: left;
-    position: relative;
-    left: -200px;
+}
+
+/* Right Widget Container */
+.widget-right {
+    width: 50%;
 }
 
 /* Title of Widget */
-.widget h1 {
+.widget-right h1 {
     margin: 10px 0;
     font-size: 2em;
 }
 
 /* Date */
-.widget h2 {
+.widget-right h2 {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+/* GitHub Link */
+.widget-right h3 {
     margin: 10px 0;
     font-size: 1em;
 
@@ -52,15 +78,15 @@
 }
 
 /* Read More Link */
-.widget h3 {
+.widget-right h4 {
     margin: 10px 0;
     font-size: 1.5em;
 
-    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 /* Main Body Text */
-.widget p {
+.widget-right p {
     margin: 10px 0;
     font-size: 1.2em;
     overflow-y: hidden;
@@ -70,8 +96,8 @@
     text-align: left;
 }
 
-/* General Wrapper */
-.widget a {
+/* Link Wrapper */
+.widget-right a {
     text-decoration: none;
     color: blue;
     font-size: 1em;
