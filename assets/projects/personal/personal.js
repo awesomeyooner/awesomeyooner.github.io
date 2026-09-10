@@ -27,6 +27,20 @@ const jsonData =
             Thinker over USB for low level control. Joystick control is with a Nintendo Switch also
             running Docker.
         `,
+    },
+    {
+        "header": "Tiny Spectrum",
+        "path": "assets/projects/personal/tiny-spectrum",
+        "github": "https://github.com/awesomeyooner/Tiny-Spectrum",
+        "date": "August 2026",
+        "description": 
+        `
+            Small little lamp that uses an 8x8 grid of WS2812B addressable LEDs. This uses a Tiny Thinker
+            STM32 board for the logic and USB-C PD (12V) power input. It features a slide potentiometer for
+            adjusting the brightness, with a joystick and LCD for changing LED states, like rainbow or white.
+            I implemented HSV to RGB colorspace transforms for cycling colors of the rainbow. It also has a missile-style
+            power switch, which I personally love because it's so satisfying.
+        `,
     }
 ]
 
