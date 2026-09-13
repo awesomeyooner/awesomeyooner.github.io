@@ -17,6 +17,25 @@ const jsonData =
         `,
     },
     {
+        "header": "PSD-17 Devboard",
+        "path": "assets/projects/personal/psd17-devboard",
+        "github": "https://github.com/awesomeyooner/PSD-17DB",
+        "date": "Sept 2026",
+        "description": 
+        `
+            4-Layer PCB designed in KiCAD and assembled by JLCPCB. 
+            
+            This board's main focus is two DRV8874 DC motor drivers
+            to control each phase of a NEMA17 Stepper Motor for Field Oriented Control.
+            I've also added things such as 
+            - Inrush current protection
+            - Input voltage sensing
+            - 4x WS2812B RGB LEDs
+            - CAN2.0B Transceiver
+            - SPI EEPROM
+        `,
+    },
+    {
         "header": "Polar One",
         "path": "assets/projects/personal/polar-one",
         "github": "https://github.com/awesomeyooner/Polar-One",
@@ -40,6 +59,18 @@ const jsonData =
             adjusting the brightness, with a joystick and LCD for changing LED states, like rainbow or white.
             I implemented HSV to RGB colorspace transforms for cycling colors of the rainbow. It also has a missile-style
             power switch, which I personally love because it's so satisfying.
+        `,
+    },
+    {
+        "header": "AS5047P Devboard",
+        "path": "assets/projects/personal/as5047-devboard",
+        "github": "https://github.com/awesomeyooner/AS5047-Devboard",
+        "date": "Feb 2026",
+        "description": 
+        `
+            Basic development board that breaks out the SPI lines of an AS5047P magnetic encoder. This has the same outline as a NEMA17
+            stepper motor. I designed this board to be used with a future project, PSD17, which aims to implement Field Oriented Control on NEMA17
+            stepper motors. This is a very basic PCB, and was designed using KiCAD. They were manufactured by JLCPCB. 
         `,
     }
 ]
